@@ -1,0 +1,246 @@
+
+:root {
+  --forest: #0F6B5F;
+  --gold: #F2A93B;
+  --ink: #16302B;
+  --canvas: #F4F7F5;
+  --mist: #E6EFEC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--canvas);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.ticket-shell,
+.form-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(15, 107, 95, .08);
+  border-radius: 20px;
+  box-shadow: 0 16px 44px rgba(22, 48, 43, .12);
+}
+
+.ticket-shell {
+  max-width: 960px;
+}
+
+.ticket-header,
+.form-card-header {
+  padding: 20px 24px;
+  color: white;
+  background: var(--forest);
+}
+
+.ticket-header h1,
+.form-card-header h1 {
+  font-weight: 700;
+}
+
+.ticket-form {
+  padding: clamp(18px, 4vw, 32px);
+}
+
+.form-card {
+  max-width: 760px;
+}
+
+.form-card-header p {
+  color: rgba(255, 255, 255, .85);
+}
+
+.form-card form {
+  padding: clamp(20px, 4vw, 32px) !important;
+}
+
+.form-label,
+fieldset legend {
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  min-height: 43px;
+  border-color: #dfe9e5;
+  border-radius: 10px;
+  background-color: #f7faf8;
+  color: var(--ink);
+  font-size: .88rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--forest);
+  background-color: white;
+  box-shadow: 0 0 0 .2rem rgba(15, 107, 95, .13);
+}
+
+.input-group-text {
+  color: white;
+  background: var(--forest);
+  border-color: var(--forest);
+  font-weight: 700;
+}
+
+.input-group .input-group-text {
+  border-radius: 10px 0 0 10px;
+}
+
+.input-group .form-control {
+  border-radius: 0 10px 10px 0;
+}
+
+.form-check-input {
+  border-color: #b8cbc4;
+}
+
+.form-check-input:checked {
+  background-color: var(--forest);
+  border-color: var(--forest);
+}
+
+.form-check-input:focus {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 .2rem rgba(15, 107, 95, .14);
+}
+
+.form-check-label {
+  color: #425650;
+  font-size: .82rem;
+}
+
+.trip-toggle {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid #b8d0c8;
+  border-radius: 999px;
+  background: white;
+}
+
+.trip-toggle .btn {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 999px !important;
+  color: var(--forest);
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.trip-toggle .btn-check:checked + .btn {
+  color: white;
+  background: var(--forest);
+}
+
+.btn:focus-visible,
+.form-check-input:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.ticket-actions .btn,
+.form-card .btn {
+  min-height: 44px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: .84rem;
+  font-weight: 700;
+}
+
+.btn-clear {
+  color: var(--ink);
+  background: white;
+  border: 1px solid #9aada6;
+}
+
+.btn-clear:hover {
+  background: var(--mist);
+  border-color: var(--forest);
+}
+
+.btn-find,
+.form-card .btn-primary {
+  color: var(--ink);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.btn-find:hover,
+.form-card .btn-primary:hover {
+  color: white;
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+.form-card .form-label {
+  font-size: .85rem;
+}
+
+.form-card .form-control,
+.form-card .form-select {
+  min-height: 46px;
+}
+
+.form-card textarea.form-control {
+  min-height: 110px;
+}
+
+.invalid-feedback {
+  font-size: .78rem;
+}
+
+/* Display validation feedback after the user interacts with a field. */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: #dc3545;
+}
+
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border-color: var(--forest);
+}
+
+@media (max-width: 575.98px) {
+  .ticket-shell,
+  .form-card {
+    border-radius: 16px;
+  }
+
+  .ticket-header {
+    padding: 16px 18px;
+  }
+
+  .ticket-form {
+    padding: 18px;
+  }
+
+  .trip-toggle {
+    display: flex;
+    width: 100%;
+  }
+
+  .trip-toggle .btn {
+    flex: 1;
+  }
+
+  .ticket-actions .btn {
+    width: 100%;
+  }
+}
